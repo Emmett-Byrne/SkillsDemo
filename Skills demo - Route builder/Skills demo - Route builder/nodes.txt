@@ -1,0 +1,24 @@
+Dublin, 53.3498, 6.2603, London, Amsterdam
+London, 51.5072, 0.1276, Dublin, Amsterdam, Brussels, Paris
+Amsterdam, 52.3676, 4.9041, Dublin, London, Brussels, Berlin, Luxembourg, Copenhagen
+Brussels, 50.8476, 4.3572, Amsterdam, London, Luxembourg, Paris
+Paris, 50.8476, 4.3572, London, Brussels, Vienna, Luxembourg, Bern, Madrid
+Luxembourg, 49.8153, 6.1296, Brussels, Amsterdam, Paris, Bern, Prague, Berlin
+Berlin, 52.5200, 13.4050, Copenhagen, Luxembourg, Amsterdam, Prague, Warsaw
+Bern, 46.9480, 7.4474, Luxembourg, Paris, Madrid, Rome, Vienna, Prague
+Rome, 41.9028, 12.4964, Madrid, Athens, Budapest, Vienna, Bern
+Madrid, 40.4168, 3.7038, Rome, Bern, Paris
+Lisbon, 38.7223, 9.1393, Madrid
+Athens, 37.9838, 23.7275, Rome, Budapest, Bucharest
+Vienna, 48.2082, 16.3738, Prague, Budapest, Rome, Bern, Warsaw, Luxembourg
+Prague, 50.0755, 14.4378, Vienna, Berlin, Bern, Luxembourg, Budapest, Warsaw
+Budapest, 47.4979, 19.0402, Prague, Vienna, Athens, Rome, Bucharest, Warsaw
+Bucharest, 44.4268, 26.1025, Budapest, Athens, Kyiv, Warsaw
+Warsaw, 52.2297, 21.0122, Copenhagen, Prague, Minsk, Riga, Kyiv, Berlin, Bucharest, Vienna, Budapest
+Copenhagen, 55.6761, 12.5683, Warsaw, Amsterdam, Berlin, Stockholm, Oslo
+Oslo, 59.9139, 10.7522, Copenhagen, Stockholm, 
+Stockholm, 59.3293, 18.0686, Helsinki, Oslo, Copenhagen, Riga, 
+Helsinki, 60.1699, 24.9384, Stockholm, Riga, 
+Riga, 56.9496, 24.1052, Helsinki, Stockholm, Warsaw, Minsk, 
+Kyiv, 50.4501, 30.5234, Minsk, Bucharest, Warsaw
+Minsk, 53.9006, 27.5590, Kyiv, Warsaw, Riga
