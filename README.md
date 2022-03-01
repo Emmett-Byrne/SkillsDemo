@@ -13,7 +13,7 @@ well documented with each project having a brief overview and going into more de
 
 ## Project Descriptions
 
-# Route Builder
+###### Route Builder
 This is a quick project I did over a weekend. I created a list of European Capitals along with their coordinates and created connections between the various cities.
 I then created a pathfinding algorithm (A*) that when given 2 locations will navigate through the graph and efficiently find the shortest route.
 The main purpose of this project is to demonstrate c++ and coding fundamentals, (encapsulation, containers, pointers etc.)
