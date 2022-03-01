@@ -1,6 +1,6 @@
 # SkillsDemo
 
-###Description
+######Description
 
 So since I'm starting my job hunt in the big bad world of software I decided to make this skills demo, 
 where I'll continue to build and add Projects to show off my skills old and new. I'm going to try keep this
