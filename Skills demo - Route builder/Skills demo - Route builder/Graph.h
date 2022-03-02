@@ -5,6 +5,9 @@
 #include "Node.h"
 #include "Math.h"
 
+/// <summary>
+/// This class is responsible for building our graph and pathfinding through the graph
+/// </summary>
 class Graph
 {
 public:
@@ -23,7 +26,6 @@ private:
 	Node* m_graph;
 };
 
-
 inline Node* Graph::getNodeFromName(std::string cityName)
 {
 	for (Node& node : nodes)
@@ -36,6 +38,10 @@ inline Node* Graph::getNodeFromName(std::string cityName)
 	return nullptr;
 }
 
+/// <summary>
+/// This function simply builds a graph from the given node data. Creates all the nodes and sets the connections between them
+/// </summary>
+/// <param name="nodeData">Node data</param>
 inline void Graph::buildGraph(std::vector<std::vector<std::string>> nodeData)
 {
 	//add nodes to the list
@@ -56,6 +62,16 @@ inline void Graph::buildGraph(std::vector<std::vector<std::string>> nodeData)
 	}
 }
 
+/// <summary>
+/// This is the pathfinding algorithm that will create a path between 2 nodes.
+/// It is an implementation of the A* pathfinding algorithm
+/// Realisticaly for what i'm using it for here it's a bit overkill and Djikstras algorithm would be better.
+/// I would like to come back to this project at some point and add in a proceedurally generated maze and have the algorithm solve it.
+/// Which would be a much better use case for A*
+/// </summary>
+/// <param name="start"></param>
+/// <param name="destination"></param>
+/// <returns></returns>
 inline std::vector<Node*> Graph::createPath(std::string start, std::string destination)
 {
 	int iterations = 0;
@@ -72,7 +88,6 @@ inline std::vector<Node*> Graph::createPath(std::string start, std::string desti
 		return l->getTotalDistance() > r->getTotalDistance();
 	};
 	std::priority_queue<Node*, std::vector<Node*>, decltype(compare)> queue(compare);
-
 	startNode->setDistance(0);
 	startNode->setTotalDistance(Math::distanceBetween(startNode->getEast(), startNode->getNorth(), destinationNode->getEast(), destinationNode->getNorth()));
 	queue.push(startNode);
@@ -109,13 +124,12 @@ inline std::vector<Node*> Graph::createPath(std::string start, std::string desti
 	{
 		std::vector<Node*> path;
 		Node* currentNode = destinationNode;
-		path.push_back(currentNode);
 
-		while (currentNode)
+		do
 		{
-			path.push_back(currentNode);
+			path.insert(path.begin(), currentNode); //pushing to front of vector
 			currentNode = currentNode->getPrevious();
-		}
+		} while (currentNode);
 
 		std::cout << "Path created in " << iterations << " iteration" << std::endl;
 		return path;

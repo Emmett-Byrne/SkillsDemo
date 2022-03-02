@@ -26,6 +26,19 @@ int main()
 
 	//Creating Graph
 	Graph graph(data);
+
+	//Taking input
+	std::string startpoint;
+	std::string endpoint;
+
+	std::cout << "Input starting city: ";
+	std::cin >> startpoint;
+
+	std::cout << "Input destination city: ";
+	std::cin >> endpoint;
+
+	//Pathfinding
+	//std::vector<Node*> path = graph.createPath(startpoint, endpoint);
 	std::vector<Node*> path = graph.createPath("Dublin", "Kyiv");
 
 	std::cout << "Path: ";
